@@ -1,3 +1,11 @@
+CHANGES
+1. Random chance to explode token
+    Burns the transaction value from sender account with 1 in 100 chance
+2. Random chance to explode token but in a lucky fashion
+    Instead of burning, 1 in 100 chance to give 1 BOM to the sender and recipient
+3. Random block difficulty
+    Chooses a random number from 1 to a random number which is from 1 to 190000000
+
 # @dev Implementation of ERC-20 token standard.
 # @author Takayuki Jimba (@yudetamago)
 # https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md
