@@ -27,7 +27,7 @@ def setOdds(oneInThisMany: uint256):
 @external
 def addPlayer(Player: address):
     assert self.isALoser(Player)
-    assert Player in self.players
+    assert Player not in self.players
     self.players.append(Player)
 
 
@@ -43,7 +43,7 @@ def lose (Player: address):
     self.losers.append(Player)
     for i in range(100):
         self.players.pop()
-        break
+    
 
 
 
@@ -51,7 +51,7 @@ def lose (Player: address):
 #behavior: pics a random number between 1 and the 'odds' value
 @internal
 def random() -> uint256:
-    return 1
+    return self.odds - 1
 
 #play ()
 #behavior:
